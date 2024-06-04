@@ -1,18 +1,23 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Box, SimpleGrid } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" py={8}>
+      <Heading as="h1" mb={6}>Financial Times</Heading>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+        <Box bg="gray.100" p={6} borderRadius="md">
+          <Heading as="h2" size="md" mb={4}>Latest News</Heading>
+          <Text>Stay updated with the latest news articles.</Text>
+        </Box>
+        <Box bg="gray.100" p={6} borderRadius="md">
+          <Heading as="h2" size="md" mb={4}>Trending Articles</Heading>
+          <Text>Check out what's trending right now.</Text>
+        </Box>
+        <Box bg="gray.100" p={6} borderRadius="md">
+          <Heading as="h2" size="md" mb={4}>Market Data</Heading>
+          <Text>Get the latest market data and trends.</Text>
+        </Box>
+      </SimpleGrid>
     </Container>
   );
 };
